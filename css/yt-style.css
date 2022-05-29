@@ -1,0 +1,395 @@
+body {
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+  font-family: 'Noto Sans TC', sans-serif;
+  font-weight: 300
+}
+
+hr {
+  border:0;
+  background-color:rgba(146, 146, 146, 0.333);
+  height:1px;
+}
+
+#container {
+  width: 100vw;
+  height: 100vh;
+}
+
+#top {
+  width: 100%;
+  height: 65px;
+  background: #fff;
+  position: fixed;
+  z-index: 1;
+  box-shadow: 0px 1px 1px 0px #eee;
+}
+
+.start {
+  display: inline-block;
+  width: 250px;
+  height: 65px;
+  position: relative;
+  left: -4px;
+}
+
+#burger {
+  width: 0px;
+  position: absolute;
+  top: 50%;
+  left: 30px;
+  transform: translateY(-50%);
+}
+
+#burger:hover {
+  cursor: pointer;
+}
+
+.logo {
+  width: 110px; 
+  height: 45px;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 60px;
+  transform: translate(0%, -50%);
+}
+
+.logo:hover {
+  cursor: pointer;
+}
+
+
+.search {
+  width: 800px;
+  height: 40px;
+  margin: 0%;
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.search-bar {
+  width: 540px;
+  height: 40px;
+  border: 1px solid #d3d3d3;
+  color: #999;
+  font-size: 16px;
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* 放大鏡圖案 */
+.magnifier {
+  display: inline-block;
+  width: 60px;
+  height: 44px;
+  border: 1px solid #d3d3d3;
+  background-color: #fafafa;
+  position: relative;
+  left: 672px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.magnifier:hover {
+  cursor: pointer;
+  background-color: #f0f0f0;
+}
+.magnifier:active {
+  background-color: #e9e9e9;
+}
+
+.magnifier[title]:hover::after {
+  content: attr(title);
+  position: absolute;
+  top: 147%;
+  left: 10px;
+  font-size: 10px;
+  height: 30px;
+  padding: 0px 10px 0px 10px;
+  line-height: 2.4;
+  color: rgba(255, 255, 255, 0.9);
+  background-color: rgba(79, 79, 79, 0.8);
+  
+  transition-delay: 0.5s;
+}
+
+/* 語音搜尋圖案 */
+.mic {
+  display: inline-block;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: #fafafa;
+  position: relative;
+  left: 672px;
+  top: -35%;
+  margin: 10px;
+}
+
+.mic:hover {
+  cursor: pointer;
+}
+
+.mic[title]:hover::after {
+  text-align: center;
+  content: attr(title);
+  position: absolute;
+  top: 140%;
+  left: 0;
+  transform: translateX(-20%);
+  font-size: 10px;
+  width: 80px;
+  height: 30px;
+  padding: 0px 10px 0px 10px;
+  line-height: 2.4;
+  color: rgba(255, 255, 255, 0.9);
+  background-color: rgba(79, 79, 79, 0.8);
+}
+
+.end {
+  display: inline-block;
+  position: fixed;
+  right: 0%;
+  top: 1%;
+}
+.dots {
+  width: 24px;
+  height:24px;
+  margin: 0px 28px 0px 0px;
+  position: relative;
+  display: inline-block;
+  top: 10px;
+}
+
+.dots:hover {
+  cursor: pointer;
+}
+
+.dots[title]:hover::after {
+  content: attr(title);
+  position: absolute;
+  top: 240%;
+  left: -48px;
+  font-size: 10px;
+  width: 100px;
+  height: 30px;
+  padding: 0px 10px 0px 10px;
+  line-height: 2.4;
+  color: rgba(255, 255, 255, 0.9);
+  background-color: rgba(79, 79, 79, 0.8);
+}
+
+.setting {
+  display: inline-block;
+}
+
+.setting:hover {
+  cursor: pointer;
+}
+
+.setting[title]:hover::after {
+  content: attr(title);
+  position: absolute;
+  top: 155%;
+  left: 20%;
+  font-size: 10px;
+  height: 30px;
+  padding: 0px 10px 0px 10px;
+  line-height: 2.4;
+  color: rgba(255, 255, 255, 0.9);
+  background-color: rgba(79, 79, 79, 0.8);
+}
+
+/* ------------------------------------------------------------ */
+
+#left {
+  width: 240px;
+  height: 100vh;
+  background: #fff;
+  float: left;
+  position: fixed;
+  overflow: auto;
+  overflow-x: hidden;
+  scrollbar-width: none;
+  /* z-index: -1; */
+}
+
+#space {
+  width: 20px;
+  height: 65px;
+}
+
+.menu {
+  width: 200px;
+  height: 30px;
+  text-align: left;
+  padding: 5px 20px 5px 20px;
+  position: relative;
+  /* left: 15px; */
+}
+
+.menu:hover {
+  cursor: pointer;
+  background-color: #f2f2f2;
+}
+
+.menu p {
+  display: inline-block;
+  font-size: 13px;
+  line-height: 2;
+  margin: auto;
+  position: absolute;
+  left: 20px;
+  top: -5px;
+}
+
+.svg {
+  width: 24px;
+  height: 24px;
+}
+
+.svg-login {
+  width: 24px;
+  height: 24px;
+  position: relative;
+  transform: translateY(20%);
+}
+
+.btn {
+  width: 85px;
+  height: 36px;
+  color: #065fd4;
+  border: 1px solid #065fd4;
+  background-color: #fff;
+  margin: 0px 20px 0px 0px;
+}
+
+.btn:hover {
+  cursor: pointer;
+}
+
+.login {
+  display: inline-block;
+  width: 30px;
+  margin: 0px;
+  position: relative;
+  top: 20%;
+}
+
+.box p {
+  width: 180px;
+  position: relative;
+  font-size: 13.5px;
+}
+
+.box3 {
+  position: relative;
+  left: 20px;
+}
+
+.menu-ti {
+  width: 150px;
+  height: 10px;
+  padding: 5px 20px 5px 20px;
+  margin: 10px;
+  font-size: 13px;
+  position: relative;
+  /* left: 7px; */
+  padding: 8px 0px 12px 11px;
+  color: #606060;
+}
+
+.shorts-ic {
+  position: absolute;
+}
+
+.img {
+  width: 24px;
+  height: 24px;
+  border-radius:50%;
+}
+
+.box-footer {
+  width: 190px;
+  position: relative;
+  left: 20px;
+}
+
+.box-footer div {
+  padding: 14px 0px 0px 0px;
+  color: #444;
+}
+
+.box-footer a {
+  cursor: pointer;
+  font-size: 13px;
+  margin-right: 8px;
+}
+
+.box-footer p {
+  font-size: 10px;
+  color: #888;
+  font-weight: 500;
+  padding: 14px 0px 30px 0px;
+  margin: 0%;
+}
+
+/* ------------------------------------------------- */
+
+#choose {
+  width: 100vw;
+  height: 70px;
+  background-color: #fff;
+  position: fixed;
+  top: 65px;
+  left: 239px;
+}
+
+#items {
+  width: 60%;
+  height: 50px;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0%;
+  padding: 0%;
+}
+
+.item {
+  height: 15px;
+  border: 1px solid rgb(198, 198, 198);
+  border-radius: 50px;
+  display: inline-block;
+  padding: 4px 10px 11px 10px;
+  position: relative;
+  top: 50%;
+  transform: translate(0%, -50%);
+  background: #f2f2f2;
+  font-size: 14px;
+  margin: 0px 10px 0px 0px;
+}
+
+.item:hover {
+  cursor: pointer;
+  background-color: #e5e5e5;
+}
+
+.iframes {
+  width: 100vw;
+  height: 100vh;
+  background: #f9f9f9;
+  position: fixed;
+  left: 240px;
+  top: 135px;
+  /* z-index: -1; */
+}
