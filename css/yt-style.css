@@ -67,6 +67,8 @@ hr {
   height: 40px;
   margin: 0%;
   display: inline-block;
+  padding: 0px;
+
   position: absolute;
   top: 50%;
   left: 50%;
@@ -75,11 +77,12 @@ hr {
 
 .search-bar {
   width: 540px;
-  height: 40px;
+  height: 36px;
   border: 1px solid #d3d3d3;
   color: #999;
   font-size: 16px;
   display: inline-block;
+
   position: absolute;
   top: 50%;
   left: 50%;
@@ -89,8 +92,8 @@ hr {
 /* 放大鏡圖案 */
 .magnifier {
   display: inline-block;
-  width: 60px;
-  height: 44px;
+  width: 64px;
+  height: 40px;
   border: 1px solid #d3d3d3;
   background-color: #fafafa;
   position: relative;
